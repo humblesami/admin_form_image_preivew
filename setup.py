@@ -1,12 +1,24 @@
 from setuptools import find_namespace_packages, setup
+import distutils.errors
+
+bdist_wheel = None
+
+try:
+    import wheel.bdist_wheel
+    class bdist_wheel(wheel.bdist_wheel.bdist_wheel):
+        def run(self, *args, **kwargs):
+            raise distutils.errors.DistutilsClassError("Error raised")
+except ModuleNotFoundError:
+    pass
 
 with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setup(
     name='admin-form-image-preivew',
-    version='0.4',
+    version='1.2',
     description='Test package.',
+    # cmdclass={'bdist_wheel': bdist_wheel},
     # package_dir={'': 'src'},
     # packages = find_packages(where="src"),
     packages=find_namespace_packages(
