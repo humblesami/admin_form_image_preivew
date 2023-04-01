@@ -1,2 +1,12 @@
-python3 setup.py sdist bdist_wheel
-python3 -m pip install ~/pips/admin_form_image_preivew/dist/xyz.whl
+rm -r dist/*.*
+rm -r build/*.*
+pip cache purge
+python setup.py clean --all
+python setup.py bdist_wheel
+
+pip uninstall admin_form_image_preivew
+pip install dist/admin_form_image_preivew-1.2-py3-none-any.whl
+
+
+
+python setup.py sdist bdist_wheel

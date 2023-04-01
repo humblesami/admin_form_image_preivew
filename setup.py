@@ -23,8 +23,8 @@ setup(
     # packages = find_packages(where="src"),
     packages=find_namespace_packages(
         include=[
-            "src.app1",
-            "src.app1.templates.admin",
+            "app1.templates.admin",
+            "app1",
         ],
     ),
     classifiers=[
