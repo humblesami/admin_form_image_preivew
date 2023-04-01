@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setup(
     name='admin-form-image-preivew',
-    version='0.3',
+    version='0.4',
     description='Test package.',
     # package_dir={'': 'src'},
     # packages = find_packages(where="src"),
