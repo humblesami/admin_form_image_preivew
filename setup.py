@@ -5,14 +5,14 @@ with open("README.md", "r") as fh:
 
 setup(
     name='admin-form-image-preivew',
-    version='0.0.12',
+    version='0.3',
     description='Test package.',
     # package_dir={'': 'src'},
     # packages = find_packages(where="src"),
     packages=find_namespace_packages(
         include=[
-            "src.app1.templates.admin",
             "src.app1",
+            "src.app1.templates.admin",
         ],
     ),
     classifiers=[
