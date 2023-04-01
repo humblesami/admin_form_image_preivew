@@ -1,6 +1,5 @@
-rm -r dist/*.*
-rm -r build/*.*
-pip cache purge
+rm -r dist/*
+rm -r build/*
 python setup.py clean --all
 python setup.py bdist_wheel
 
