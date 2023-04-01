@@ -6,8 +6,9 @@ Make wheel
 python3 setup.py sdist bdist_wheel
 
 Install wheel
-ls ~/pips/admin_form_image_preivew/dist
-python3 -m pip install ~/pips/admin_form_image_preivew/dist/admin_form_image_preivew-0.0.3-py3-none-any.whl
+python3 setup.py sdist bdist_wheel
+python3 -m pip install ~/pips/admin_form_image_preivew/dist/xyz.whl
+
 twine upload dist/*
 twine upload dist/* --config-file ~/.pypirc1
 
