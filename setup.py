@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name='admin_form_image_preivew',
-    version='0.0.3',
+    version='0.0.23',
     description='Test package.',
     py_modules=["admin_form_image_preivew"],
     package_dir={'': 'src'},

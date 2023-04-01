@@ -1,0 +1,7 @@
+{% extends "admin/change_form.html" %}
+{% load i18n static %}
+{% block object-tools %}
+    {{ block.super }}
+    <h2>Preivew</h2>
+    <script defer="defer" src="{% static 'app1/image_preview.js' %}"></script>
+{% endblock %}
