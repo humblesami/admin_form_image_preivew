@@ -124,4 +124,24 @@ STATIC_URL = '/static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-INSTALLED_APPS += ['app1', 'sap1']
+import os
+
+PIP_APPS = [
+
+]
+after_apps = ['sap1', 'app1']
+INSTALLED_APPS = PIP_APPS + INSTALLED_APPS + after_apps
+ALLOW_UNICODE_SLUGS = True
+
+PATH_PREFIX = ''
+slashed_path = ''
+if PATH_PREFIX:
+    slashed_path = '/' + PATH_PREFIX
+if not slashed_path.endswith('/'):
+    slashed_path += '/'
+
+STATIC_ROOT = os.path.join(BASE_DIR, "static/")
+MEDIA_ROOT = os.path.join(BASE_DIR, "media/")
+
+MEDIA_URL = slashed_path + 'media/'
+STATIC_URL = slashed_path + 'static/'

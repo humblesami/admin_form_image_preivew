@@ -29,3 +29,5 @@ sitemaps
 temp.json
 /MySQLdb
 /rest_framework
+media/*
+!/media/*.txt
