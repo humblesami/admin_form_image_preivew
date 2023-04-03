@@ -1,10 +1,9 @@
 rm -r dist/*
 rm -r build/*
 python setup.py clean --all
-python setup.py bdist_wheel
-
+python setup.py bdist_wheel -v=1.1
 pip uninstall admin_form_image_preivew
-pip install dist/admin_form_image_preivew-1.2-py3-none-any.whl
+pip install dist/admin_form_image_preivew-1.1-py3-none-any.whl
 
 
 
