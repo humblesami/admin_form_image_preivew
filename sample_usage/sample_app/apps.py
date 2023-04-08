@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class Sap1Config(AppConfig):
+class SampleAppConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'sap1'
+    name = 'sample_app'
