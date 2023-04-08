@@ -6,11 +6,7 @@ pip uninstall admin_form_image_preivew
 pip install dist/admin_form_image_preivew-1.2-py3-none-any.whl
 
 
-python setup.py sdist bdist_wheel
-
-
 https://github.com/humblesami/admin_form_image_preivew
-
 
 Make wheel
 

@@ -1,8 +1,7 @@
 from django.contrib import admin
 from django.conf import settings
-from django.conf.urls import url
 from django.views.static import serve
-from django.urls import include, re_path
+from django.urls import re_path
 
 
 
@@ -20,7 +19,7 @@ def define_pth():
     if pth_prefix:
         pth_prefix = r'^'+pth_prefix
     app_pth = [
-        url(pth_prefix + 'admin/', admin.site.urls),
+        re_path(pth_prefix + 'admin/', admin.site.urls),
     ]
     all_pth = media_pth + static_pth + app_pth
     return all_pth

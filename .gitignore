@@ -30,4 +30,6 @@ temp.json
 /MySQLdb
 /rest_framework
 media/*
-!/media/*.txt
+!/media/init.txt
+sample_usage/static/*
+!sample_usage/static/init.txt
