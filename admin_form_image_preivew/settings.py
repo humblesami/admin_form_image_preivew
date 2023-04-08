@@ -144,4 +144,3 @@ LANGUAGES = (
 
 # Set the default language for your site.
 LANGUAGE_CODE = "en"
-
