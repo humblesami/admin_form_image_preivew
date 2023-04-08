@@ -33,7 +33,7 @@ ROOT_URLCONF = "sample.urls"
 WSGI_APPLICATION = "django_clone.wsgi.application"
 
 INSTALLED_APPS = [
-    "app1",
+    "admin_image_preview",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",

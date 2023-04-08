@@ -1,6 +1,7 @@
 (function () {
-
-    let image_fields = $('form .form-row input[accept="image/*"]');
+    console.log('Image preview');
+    let image_fields = document.querySelectorAll('form .form-row input[accept="image/*"]');
+    console.log(image_fields);
     //localStorage.setItem('test_admin_form_image_preivew', 1);
     if(localStorage.getItem('test_admin_form_image_preivew')){
         test_usability();
@@ -16,10 +17,10 @@
 
         let subject = ' Image Preview => ';
         let message = 'You should see an image preview after changing any of '+cnt+' file input having accept="image/*"';
-        if($('a.deletelink').length > 0){
-            let upload_field_conrtainers = $('p.file-upload');
+        if(document.querySelector('a.deletelink').length > 0){
+            let upload_field_conrtainers = document.querySelector('p.file-upload');
             let cnt1 = upload_field_conrtainers.length;
-            let cnt2 = upload_field_conrtainers.find('a').length;
+            let cnt2 = upload_field_conrtainers.querySelector('a').length;
             if(cnt2 == cnt){
                 console.log('Success:' + subject, 'edit mode');
             }
@@ -42,38 +43,41 @@
         console.log(message);
     }
 
-    image_fields.each((i, el) => {
-        if (el.name.indexOf('__prefix__') > -1) { return; }
-        el.onchange = readFileShowImage;
-        let parent_obj = $(el).parent();
-        let link_el = parent_obj.find('a');
-        if(link_el.length) { link_el.attr('target', '_blank'); }
-        let preview_container = parent_obj.find('.image-preview');
-        if(!preview_container.length){
-            parent_obj.append(`<div class="image-preview" style="padding-top:10px"></div>`);
-            preview_container = parent_obj.find('.image-preview');
-        }
-        if(link_el.length){
-            let link_href = link_el.attr('href');
-            preview_container.html(`<a href="${link_href}" target="_blank"><img src="${link_href}" style="max-height:20vh;" /></div></a>`);
-        }
-        else{
-            preview_container.html('');
-        }
-    });
-
     function readFileShowImage(ev) {
-        let input = ev.target;
-        let parent_obj = $(input).parent().find('.image-preview');
-        console.log(input.files, input);
+        let input = this;
+        let parent_obj = input.parentNode.querySelector('.image-preview');
+        console.log(input.files.length, input);
         if (input.files && input.files[0]) {
             var reader = new FileReader();
             reader.onload = function (ev1) {
-                parent_obj.html(`<img src="${ev1.target.result}" style="max-height:20vh;" /></div>`);
+                parent_obj.innerHTML = (`<img src="${ev1.target.result}" style="max-height:20vh;" />`);
             };
             reader.readAsDataURL(input.files[0]);
         } else {
-            parent_obj.html('');
+            parent_obj.innerHTML = ('');
         }
     }
+
+    for (let file_el of image_fields) {
+        if (file_el.name.indexOf('__prefix__') > -1) { return; }
+        file_el.onchange = readFileShowImage;
+        file_el.addEventListener('change', readFileShowImage);
+        console.log(file_el);
+        let parent_obj = file_el.parentNode;
+        let link_el = parent_obj.querySelector('a');
+        if(link_el) { link_el.attr('target', '_blank'); }
+        let preview_container = parent_obj.querySelector('.image-preview');
+        if(!preview_container){
+            parent_obj.innerHTML += (`<div class="image-preview" style="padding-top:10px"></div>`);
+            preview_container = parent_obj.querySelector('.image-preview');
+        }
+        if(link_el){
+            let link_href = link_el.attr('href');
+            preview_container.innerHTML = (`<a href="${link_href}" target="_blank"><img src="${link_href}" style="max-height:20vh;" /></a>`);
+        }
+        else{
+            preview_container.innerHTML = ('');
+        }
+    }
+
 })();

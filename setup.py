@@ -49,8 +49,8 @@ def main(vv):
         setup_requires=['setuptools_scm'],
         packages=find_namespace_packages(
             include=[
-                "app1.templates.admin",
-                "app1"
+                "admin_image_preview.templates.admin",
+                "admin_image_preview"
             ],
         ),
     )

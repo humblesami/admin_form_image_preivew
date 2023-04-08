@@ -17,7 +17,7 @@ __pycache__
 node_modules
 /**/migrations/*.py
 !/**/migrations/__init__.py
-!/app1/migrations/*.py
+!/admin_image_preview/migrations/*.py
 *.sqlite3
 config.json
 /static

@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class AppConfig(AppConfig):
+class AdminImagePreviewConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'app1'
+    name = 'admin_image_preview'
