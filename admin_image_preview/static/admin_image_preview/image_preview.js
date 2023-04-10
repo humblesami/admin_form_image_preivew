@@ -17,7 +17,8 @@
 
         let subject = ' Image Preview => ';
         let message = 'You should see an image preview after changing any of '+cnt+' file input having accept="image/*"';
-        if(document.querySelector('a.deletelink').length > 0){
+        let image_links = document.querySelector('a.deletelink');
+        if(image_links){
             let upload_field_conrtainers = document.querySelector('p.file-upload');
             let cnt1 = upload_field_conrtainers.length;
             let cnt2 = upload_field_conrtainers.querySelector('a').length;
@@ -46,7 +47,7 @@
     function readFileShowImage(ev) {
         let input = this;
         let parent_obj = input.parentNode.querySelector('.image-preview');
-        console.log(input.files.length, input);
+        console.log('Executing on change for', input);
         if (input.files && input.files[0]) {
             var reader = new FileReader();
             reader.onload = function (ev1) {
@@ -62,7 +63,7 @@
         if (file_el.name.indexOf('__prefix__') > -1) { return; }
         file_el.onchange = readFileShowImage;
         file_el.addEventListener('change', readFileShowImage);
-        console.log(file_el);
+        console.log('Registered on change for', file_el);
         let parent_obj = file_el.parentNode;
         let link_el = parent_obj.querySelector('a');
         if(link_el) { link_el.attr('target', '_blank'); }
