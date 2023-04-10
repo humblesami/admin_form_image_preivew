@@ -115,7 +115,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 import os
 
 
-INSTALLED_APPS = ['admin_image_preview'] + INSTALLED_APPS
+INSTALLED_APPS = ['admin_image_preview', 'initsql'] + INSTALLED_APPS
 ALLOW_UNICODE_SLUGS = True
 
 PATH_PREFIX = ''

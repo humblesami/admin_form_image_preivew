@@ -1,7 +1,8 @@
 import os
 import glob
+from os import path
 from pathlib import Path
-dir_path = str(os.path.dirname(os.path.realpath(__file__)))
+dir_path = str(path.dirname(path.realpath(__file__)))
 
 
 def remove_migrations():
@@ -18,9 +19,9 @@ def remove_migrations():
             for file_path1 in sub_res:
                 os.remove(file_path1)
         elif not file_path.endswith('__init__.py'):
-            if os.path.isfile(file_path):
+            if path.isfile(file_path):
                 os.remove(file_path)
-    if os.path.exists('db.sqlite3'):
+    if path.exists('db.sqlite3'):
         os.remove('db.sqlite3')
     print('Migration files removed')
 
