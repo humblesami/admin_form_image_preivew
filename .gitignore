@@ -21,7 +21,8 @@ node_modules
 *.sqlite3
 config.json
 /static
-/media
+media
+!/media/init.txt
 ignored
 /django
 logs/*.txt
@@ -29,7 +30,5 @@ sitemaps
 temp.json
 /MySQLdb
 /rest_framework
-media/*
-!/media/init.txt
 sample_usage/static/*
 !sample_usage/static/init.txt

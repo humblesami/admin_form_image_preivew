@@ -114,8 +114,9 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 import os
 
-
-INSTALLED_APPS = ['admin_image_preview', 'initsql'] + INSTALLED_APPS
+my_apps = ['admin_image_preview', 'initsql']
+INSTALLED_APPS = my_apps + INSTALLED_APPS
+# INSTALLED_APPS = INSTALLED_APPS + my_apps
 ALLOW_UNICODE_SLUGS = True
 
 PATH_PREFIX = ''
@@ -130,3 +131,4 @@ MEDIA_ROOT = os.path.join(BASE_DIR, "media/")
 
 MEDIA_URL = slashed_path + 'media/'
 STATIC_URL = slashed_path + 'static/'
+AUTH_PASSWORD_VALIDATORS = []

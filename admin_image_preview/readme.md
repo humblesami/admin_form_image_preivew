@@ -36,7 +36,7 @@ Test manually:
 ----------------------------------------------------------------
 
 1. Write follwing statement in console (Guide to console => https://developer.chrome.com/docs/devtools/console/javascript/)
-localStorage.setItem('test_admin_form_image_preivew', 1);
+localStorage.setItem('test_image_preivew', 1);
 2. press enter
 3. open/refresh any django admin form
 
@@ -49,7 +49,7 @@ or
 
 After testing
 write follwing statement in console
-localStorage.removeItem('test_admin_form_image_preivew');
+localStorage.removeItem('test_image_preivew');
 
 
 
