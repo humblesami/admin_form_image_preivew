@@ -1,4 +1,8 @@
-Test Django Package
+Description:
+
+The module when installed and added in installed_apps (at top) in settings.py of a django project will
+show the preview of every image field in every admin change_form (add/edit) for all models and apps
+
 
 See the sample app for usage/code
 
@@ -27,4 +31,3 @@ http://127.0.0.1:8000/admin/admin_image_preview/model1/add/
 7. Add image to check preview
 
 8. See docs/make_pip.txt to make/build/test and upload your own pip package
-
