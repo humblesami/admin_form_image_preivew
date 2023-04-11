@@ -34,4 +34,4 @@ http://127.0.0.1:8000/admin/admin_image_preview/model1/add/
 7. Add image to check preview
 
 **Make you own pip package**
-See https://pypi.org/project/admin-form-image-preivew/ to make/build/test and upload `your own pip package`
+See https://github.com/humblesami/admin_form_image_preivew/blob/master/docs/make_pip.md to make/build/test and upload `your own pip package`
