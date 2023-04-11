@@ -48,7 +48,6 @@
         }
 
         function readFileShowImage(preview_container, input) {
-            console.log('Executing on change for', input);
             if (input.files && input.files[0]) {
                 var reader = new FileReader();
                 reader.onload = function (ev1) {
