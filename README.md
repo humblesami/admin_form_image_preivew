@@ -8,8 +8,7 @@ See the sample app for usage/code
 2. `cd admin_form_image_preivew/sample_usage`
 3. `pip install -r requirements.txt`
 
-# Not required
--- but if you want to reset the database, you can do this --
+*Not required* but if you want to reset the database, you can do this
 3.1. `python manage.py initsql.py`
 
 
