@@ -1,5 +1,5 @@
 **Insallation**
-1. `pip install admin-form-image-preivew==1.1`
+1. `pip install admin-form-image-preivew`
 2. Add `admin_image_preview` in installed apps in `settings.py` of django project
     INSTALLED_APPS = [
         'admin_image_preview',
@@ -34,4 +34,4 @@ http://127.0.0.1:8000/admin/admin_image_preview/model1/add/
 7. Add image to check preview
 
 **Make you own pip package**
-See `docs/make_pip.txt` to make/build/test and upload `your own pip package`
+See https://pypi.org/project/admin-form-image-preivew/ to make/build/test and upload `your own pip package`
