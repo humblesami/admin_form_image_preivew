@@ -14,7 +14,7 @@
     `rm -r dist/*`
     `rm -r build/*`
     `python setup.py clean --all`
-    `python setup.py sdist bdist_wheel -v=1.1`
+    `python setup.py sdist bdist_wheel -v=1.2`
 
 **Install and test locally**
 `pip uninstall admin-form-image-preivew`
