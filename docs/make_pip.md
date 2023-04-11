@@ -6,7 +6,7 @@ cd ../
 rm -r dist/*
 rm -r build/*
 python setup.py clean --all
-python setup.py sdist bdist_wheel -v=1.0
+python setup.py sdist bdist_wheel -v=1.1
 
 **Install and test locally**
 pip uninstall admin-form-image-preivew
@@ -20,9 +20,9 @@ https://twine.readthedocs.io/en/stable/
 pip install twine
 
 twine upload dist/*
-twine upload dist/* --config-file ~/.pypirc1
+twine upload dist/* --config-file ~/.pypirc_test
 or
-twine upload dist/* --config-file ~/.pypirc2
+twine upload dist/* --config-file ~/.pypirc_prod
 
 
 **Sample config files for twine**

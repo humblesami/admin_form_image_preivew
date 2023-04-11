@@ -4,7 +4,8 @@ from setuptools import find_namespace_packages, setup
 def main(vv):
 
     install_requires = [
-        "django",
+        "Django>=3",
+        "Pillow>=9"
     ]
 
     deploy_requires = [
