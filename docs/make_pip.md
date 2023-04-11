@@ -10,7 +10,7 @@ python setup.py bdist_wheel -v=1.0
 
 **Install and test locally**
 pip uninstall admin-form-image-preivew
-pip install dist/admin-form-image-preivew-1.0-py3-none-any.whl
+pip install dist/admin_form_image_preivew-1.0-py3-none-any.whl
 
 
 **Upload your**
