@@ -5,7 +5,7 @@ def main(vv):
 
     install_requires = [
         "Django>=3",
-        "Pillow>=9"
+        "Pillow>=8"
     ]
 
     deploy_requires = [

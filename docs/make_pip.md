@@ -14,11 +14,11 @@
     `rm -r dist/*`
     `rm -r build/*`
     `python setup.py clean --all`
-    `python setup.py sdist bdist_wheel -v=1.4`
+    `python setup.py sdist bdist_wheel -v=1.5`
 
 **Install and test locally**
 `pip uninstall admin-form-image-preivew`
-`pip install dist/your_module_name-1.4-py3-none-any.whl`
+`pip install dist/your_module_name-1.5-py3-none-any.whl`
 
 
 **Upload your pip**
